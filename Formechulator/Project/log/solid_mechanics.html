@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Font Size Increase</title>
+<style>
+  /* CSS to increase header font size */
+  h1 {
+    font-size: 36px; /* You can adjust the size as needed */
+  }
+  h2 {
+    font-size: 30px; /* You can adjust the size as needed */
+  }
+  h3 {
+    font-size: 24px; /* You can adjust the size as needed */
+  }
+  /* Add styles for other headers as needed */
+</style>
+</head>
+<body>
+
+<h1>SOLID MECHANICS</h1>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORMECHULATOR</title>
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  .tab {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    height: 300px; /* Adjust height as needed */
+    overflow-y: auto;
+  }
+  .tab.active {
+    display: block;
+  }
+  .tab-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .tab-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .tab-links li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+  }
+  .tab-links li a.active {
+    background-color: #fff;
+    border-bottom: 2px solid #007bff;
+  }
+  .tab-links li a:hover {
+    background-color: #e0e0e0;
+  }
+  h2 {
+    margin-top: 0;
+    color: #007bff;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+ 
+<div id="tab1" class="tab active">
+  <h2>UNIT 1: CHAPTER 1 : SIMPLE STRESSES AND STRAINS</h2>
+  <ul>
+  <li><a href="Normal stress.html">1 Pa = 1N/m^2</a></li>
+  <li><a href="FOS.html">FOS = Ultimate Load/Allowable Load</a></li>
+  <li><a href="modulus of elasticity">Modulus Of Elasticity = Stress/Elongation</a></li>
+  <li><a href="Elongation.html">Elongation = Change in length / Original Length</a></li>
+  <li><a href="Change in length">Change in length = PL/AE</a></li>
+  <li><a href="Elongation of tapered bar with rectangular area">Change in length = (PL/t(b-a)E)*ln(b/a)</a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  </ul>
+</div>
+<div id="tab2" class="tab active">
+  <h2>UNIT 2: CHAPTER 2: SHEAR FORCE AND BENDING MOMENT DIAGRAMS</h2>
+  <p>This is the content of UNIT 2.</p>
+</div>
+<div id="tab3" class="tab active">
+  <h2>UNIT 3:<h2>
+    <h2>CHAPTER 3: BENDING STRESSES ON A BEAM<h2>
+    <h2>CHAPTER 4: SHEAR STRESS ON A BEAM<h2>
+    <h2>CHAPTER 5: SLOPE AND DEFLECTION ON A BEAM</h2>
+  <p>This is the content of UNIT 3.</p>
+</div>
+<div id="tab4" class="tab active">
+  <h2>UNIT 4:</h2>
+  <h2>CHAPTER 6: TORSION OF CIRCULAR SHAFTS</h2>
+  <h2>CHAPTER 7: BUCKLING OF COLUMNS</h2>
+  <p>This is the content of UNIT 4.</p>
+</div>
+<div id="tab5" class="tab active">
+  <h2>UNIT 5:</h2>
+  <h2>CHAPTER 8: PRINCIPAL STRESSES AND THEORIES OF FAILURE</h2>
+  <p>This is the content of UNIT 5.</p>
+</div>
+<div id="tab6" class="tab active">
+  <h2>UNIT 6:</h2>
+  <h2>CHAPTER 9: APPLICATION BASED COMBINED LOADING AND STRESSES</h2>
+  <p>This is the content of UNIT 6.</p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabs = document.querySelectorAll(".tab");
+
+    tabLinks.forEach(function(tabLink) {
+      tabLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        const tabId = this.getAttribute("data-tab");
+        const tabToShow = document.getElementById(tabId);
+
+        tabs.forEach(function(tab) {
+          tab.classList.remove("active");
+        });
+
+        tabLinks.forEach(function(link) {
+          link.classList.remove("active");
+        });
+
+        tabToShow.classList.add("active");
+        this.classList.add("active");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

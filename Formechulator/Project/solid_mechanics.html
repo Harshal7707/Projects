@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLID MECHANICS</title>
+<style>
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Header styles */
+  h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 36px; /* You can adjust the size as needed */
+    color: #01010c;
+  }
+  
+  /* Tab styles */
+  .tab {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(210, 227, 233);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    height: 300px; /* Adjust height as needed */
+    overflow-y: auto;
+  }
+  .tab.active {
+    display: block;
+  }
+  
+  /* Tab links styles */
+  .tab-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .tab-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .tab-links li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+  }
+  .tab-links li a.active {
+    background-color: #fff;
+    border-bottom: 2px solid #d9dde2;
+  }
+  .tab-links li a:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+ 
+<div id="tab1" class="tab active">
+  <h2>UNIT 1: CHAPTER 1 : SIMPLE STRESSES AND STRAINS</h2>
+  <ul>
+  <li><a href="simple_stress.html">σ (Normal Stress) = F(Force)/A(Area)</a></li>
+  <li><a href="FOS.html">FOS = Ultimate Load/Allowable Load</a></li>
+  <li><a href="modulus_of_elasticity.html">Modulus Of Elasticity =σ(Stress)/ε(Elongation)</a></li>
+  <li><a href="Elongation.html">ε(Elongation)= ΔL(Change in length)/L(Original Length)</a></li>
+  <li><a href="Hookes.html">Change in length = PL/AE</a></li>
+  <li><a href="Poisons ratio.html">Poison's ratio = -(Lateral strain/Longitudanal strain)</a></li>
+  
+  </ul>
+</div>
+<div id="tab2" class="tab active">
+  <h2>UNIT 2: CHAPTER 2: SHEAR FORCE AND BENDING MOMENT DIAGRAMS</h2>
+  <li><a href="Slope of the tangent to shear force diagram">Slope of tangent to shear stress force diagram=(-Rate of loading)</a></li>
+  <li><a href="Change in shear force">Change in shear force=(-Area under load curve)</a></li>
+  <li><a href="Slope of tangent to bending moment curve">Slope of tangent to bending moment=Shear force</a></li>
+  <li><a href="Change in bending moment">Change in bending moment=Area under shear force diagram</a></li>
+  
+</div>
+<div id="tab3" class="tab active">
+  <h2>UNIT 3:<h2>
+  <h2>CHAPTER 3: BENDING STRESSES ON A BEAM</h2>
+  <li><a href="Moment of inertia of compsite area">Ixx(Moment of inertia of composite area)= ∑(Ix+A(r^2)x)</a></li>
+  <li><a href="Flexural formula.html">Flexural formula=(σ/y)=(M/I)=(E/R)</a></li>
+  
+  <h2>CHAPTER 4: SHEAR STRESS ON A BEAM</h2>
+  <li><a href="Shear stress">T(Shear stress)=(VAȳ)/(bI)</a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <h2>CHAPTER 5: SLOPE AND DEFLECTION ON A BEAM</h2>
+  <li><a href="M">M=EI(d2y/dx2)</a></li>
+  <li><a href=""></a></li>
+</div>
+<div id="tab4" class="tab active">
+  <h2>UNIT 4:</h2>
+  <h2>CHAPTER 6: TORSION OF CIRCULAR SHAFTS</h2>
+  <li><a href="Shear Stress">T(Shear stress)=(T(Torque of the shaft)*R(Outer radius of the shaft))/J(Polar moment of inertia of the cross section of the shaft)</a></li>
+    <li><a href="Angle of twist">θ(Angle of twist)=(TR)/(GJ)</a></li>
+    <li><a href="Power">P(Power)=(2πNT)/(60*1000)</a></li>
+    <li><a href=""></a></li>
+  <h2>CHAPTER 7: BUCKLING OF COLUMNS</h2>
+  <li><a href="Euler's buckling load">P=[(π^2)EI]/(Le^2)</a></li>
+  <li><a href="Crippling stress">σcr(Crippling stress)=P/A=[(π^2)E]/(Le/K)^2</a></li>
+  <li><a href="Rankine formula">Pr(Rankine formula)=[(σc*A)/1+a(Le/K)^2]</a></li>
+  <li><a href=""></a></li>
+</div>
+<div id="tab5" class="tab active">
+  <h2>UNIT 5:</h2>
+  <h2>CHAPTER 8: PRINCIPAL STRESSES AND THEORIES OF FAILURE</h2>
+  <li><a href="Obliquity">tanΦ=(Tx'y')/σx'</a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</div>
+<div id="tab6" class="tab active">
+  <h2>UNIT 6:</h2>
+  <h2>CHAPTER 9: APPLICATION BASED COMBINED LOADING AND STRESSES</h2>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabs = document.querySelectorAll(".tab");
+
+    tabLinks.forEach(function(tabLink) {
+      tabLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        const tabId = this.getAttribute("data-tab");
+        const tabToShow = document.getElementById(tabId);
+
+        tabs.forEach(function(tab) {
+          tab.classList.remove("active");
+        });
+
+        tabLinks.forEach(function(link) {
+          link.classList.remove("active");
+        });
+
+        tabToShow.classList.add("active");
+        this.classList.add("active");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

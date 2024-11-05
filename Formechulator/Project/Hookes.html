@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hooke's Law Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hooke's Law Calculator</h1>
+  <label for="force">P=Force (N) :</label>
+  <input type="number" id="force" placeholder="Enter force">
+  <label for="length">L=Original Length (m):</label>
+  <input type="number" id="length" placeholder="Enter original length">
+  <label for="area">A=Cross-sectional Area (m²):</label>
+  <input type="number" id="area" placeholder="Enter cross-sectional area">
+  <label for="elasticity">E=Modulus of Elasticity (N/m²):</label>
+  <input type="number" id="elasticity" placeholder="Enter modulus of elasticity">
+  <button onclick="calculateHooke()">Calculate Hooke's Law</button>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateHooke() {
+    const force = parseFloat(document.getElementById("force").value);
+    const length = parseFloat(document.getElementById("length").value);
+    const area = parseFloat(document.getElementById("area").value);
+    const elasticity = parseFloat(document.getElementById("elasticity").value);
+
+    if (isNaN(force) || isNaN(length) || isNaN(area) || isNaN(elasticity) || length === 0 || area === 0 || elasticity === 0) {
+      document.getElementById("result").innerText = "Please enter valid numbers and non-zero values for length, area, and modulus of elasticity.";
+    } else {
+      const hookeLaw = (force * length) / (area * elasticity);
+      document.getElementById("result").innerText = `Hooke's Law: ${hookeLaw.toFixed(2)}`;
+    }
+  }
+</script>
+
+</body>
+</html>

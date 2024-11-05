@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modulus of Elasticity Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Modulus of Elasticity Calculator</h1>
+  <label for="stress">Stress (N/m²):</label>
+  <input type="number" id="stress" placeholder="Enter stress">
+  <label for="elongation">Elongation (m):</label>
+  <input type="number" id="elongation" placeholder="Enter elongation">
+  <button onclick="calculateModulus()">Calculate Modulus of Elasticity</button>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateModulus() {
+    const stress = parseFloat(document.getElementById("stress").value);
+    const elongation = parseFloat(document.getElementById("elongation").value);
+
+    if (isNaN(stress) || isNaN(elongation) || elongation === 0) {
+      document.getElementById("result").innerText = "Please enter valid numbers for stress and non-zero elongation.";
+    } else {
+      const modulusOfElasticity = stress / elongation;
+      document.getElementById("result").innerText = `Modulus of Elasticity: ${modulusOfElasticity.toFixed(2)} N/m²`;
+    }
+  }
+</script>
+
+</body>
+</html>

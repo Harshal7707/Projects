@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexural Stress Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Flexural Stress Calculator</h1>
+  <label for="moment">M=Bending Moment (N·m):</label>
+  <input type="number" id="moment" placeholder="Enter bending moment">
+  <label for="distance">y=Distance to Outermost Fiber (m):</label>
+  <input type="number" id="distance" placeholder="Enter distance">
+  <label for="inertia">I=Moment of Inertia (m⁴):</label>
+  <input type="number" id="inertia" placeholder="Enter moment of inertia">
+  <button onclick="calculateFlexuralStress()">σ=Calculate Flexural Stress</button>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateFlexuralStress() {
+    const moment = parseFloat(document.getElementById("moment").value);
+    const distance = parseFloat(document.getElementById("distance").value);
+    const inertia = parseFloat(document.getElementById("inertia").value);
+
+    if (isNaN(moment) || isNaN(distance) || isNaN(inertia) || inertia === 0) {
+      document.getElementById("result").innerText = "Please enter valid numbers and non-zero moment of inertia.";
+    } else {
+      const flexuralStress = (moment * distance) / inertia;
+      document.getElementById("result").innerText = `Flexural Stress: ${flexuralStress.toFixed(2)} N/m²`;
+    }
+  }
+</script>
+
+</body>
+</html>
