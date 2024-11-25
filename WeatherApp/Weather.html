@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather_container">
+            <div class="temp">
+                <p class="temp_value">20</p>
+            </div>
+            <div class="time_location">
+                <p class="location_name">Pune</p>
+                <p class="date_time">12:38 - Monday 2024-11-17</p>
+            </div>
+            <div class="condition">
+                <p class="condition_text">Mist</p>
+            </div>
+        </div>
+        <nav>
+            <form>
+                <input type="text" placeholder="Search for a location" class="search_area" />
+                <button type="submit">Search</button>
+            </form>
+            <p class="error_message" style="display: none; color: red;">Unable to fetch weather data. Please try again!</p>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
